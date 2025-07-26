@@ -1,0 +1,31 @@
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #EEEEFF;
+    width: 100%;
+
+}
+
+.navbar ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+ 
+
+
+}
+
+.navbar li {
+    padding: 12px;
+    margin-right: 20px;
+    margin-left: 20px;
+    font-weight: 300;
+    font-family:Arial, Helvetica, sans-serif ;
+
+}
+
+.navbar a {
+    text-decoration: none;
+
+
+}
