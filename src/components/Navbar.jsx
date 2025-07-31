@@ -2,7 +2,7 @@ import React from 'react'
 import './Portfolio.css'
 
 
-const Portfolio = () => {
+const Navbar = () => {
   return (
    <>
    <div className="navbar">
@@ -17,4 +17,4 @@ const Portfolio = () => {
   )
 }
 
-export default Portfolio
+export default Navbar

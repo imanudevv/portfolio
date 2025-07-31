@@ -1,17 +1,21 @@
 
 import './App.css'
 import About from './components/About'
+import Contact from './components/Contact'
 import Home from './components/Home'
-import Portfolio from './components/Portfolio'
+import Navbar from './components/Navbar'
+
 
 function App() {
   
 
   return (
     <>
-     <Portfolio/>
+     <Navbar/>
      <Home/>
      <About/>
+     <Navbar/>
+     <Contact/>
     </>
   )
 }
