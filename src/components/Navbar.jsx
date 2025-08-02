@@ -1,12 +1,12 @@
 import React from 'react'
-import './Portfolio.css'
+import './Navbar.css'
 
 
 const Navbar = () => {
   return (
    <>
    <div className="navbar">
-  <ul>
+  <ul className='links'>
     <li><a href="#home">HOME</a></li>
     <li><a href="#about">ABOUT</a></li>
     <li><a href="#skills">SKILLS</a></li>
