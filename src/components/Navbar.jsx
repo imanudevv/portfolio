@@ -1,20 +1,29 @@
-import React from 'react'
-import './Navbar.css'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import './Navbar.css';
 
 
 const Navbar = () => {
-  return (
-   <>
-   <div className="navbar">
-  <ul className='links'>
-    <li><a href="#home">HOME</a></li>
-    <li><a href="#about">ABOUT</a></li>
-    <li><a href="#skills">SKILLS</a></li>
-    <li><a href="#contact">CONTACT</a></li>
-  </ul>
-</div>
-   </>
-  )
-}
+  const [activeIndex, setActiveIndex] = useState(0);
 
-export default Navbar
+  const handleHover = (index) => {
+    setActiveIndex(index);
+  };
+
+  const highlightWidth = 95;
+  const highlightLeft = activeIndex * highlightWidth;
+
+  return (
+    <div className="navbar">
+      <nav>
+        <Link to="/" onMouseEnter={() => handleHover(0)}>HOME</Link>
+        <Link to="/about" onMouseEnter={() => handleHover(1)}>ABOUT</Link>
+        <Link to="/skills" onMouseEnter={() => handleHover(2)}>SKILLS</Link>
+        <Link to="/contact" onMouseEnter={() => handleHover(3)}>CONTACT</Link>
+        <span style={{ left: `${highlightLeft}px` }}></span>
+      </nav>
+    </div>
+  );
+};
+
+export default Navbar;
