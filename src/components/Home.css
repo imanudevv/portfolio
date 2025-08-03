@@ -1,37 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+/* 🌟 Main Heading */
 h1 {
-    text-align: center;
-    padding-top: 15%;
-    font-size: 50px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: rgb(90, 63, 63);
-
+   font-family: "Outfit", sans-serif;
+  text-align: center;
+  padding-top: 15%;
+  font-size: 50px;
+  color: black;
+  font-weight: 400;
 }
 
+/* 🖼️ Background Container */
 .bg {
-    background: #F0EBE3;
-    background-size: cover;
-    background-position: center;
-    min-height: 100vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-   
-    
+  background: #F0EBE3;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
 
+/* 👋 Greeting Section */
+.greet {
+  text-align: center;
+  padding: 2rem;
 }
 
 .greet h1 {
-    text-align: center;
-    font-size: 50px;
-    
-    color: rgb(90, 63, 63);
-
-    padding: 20px 40px;
-    border-radius: 12px;
-      background: transparent;
+    font-family: "Outfit", sans-serif;
+  font-size: 50px;
+  color: black;
+  padding: 20px 40px;
+  border-radius: 12px;
+  background: transparent;
 }
-.greet{
-   
+
+/* 🧑‍💻 Profile Image */
+.profile-img {
+  mix-blend-mode: multiply;
+  width: 350px;
+  height: auto;
+  transition: transform 0.3s ease;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }

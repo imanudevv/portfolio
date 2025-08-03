@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
+.full{
+    background: #FFFAFA;
+    margin-top: -100px;
+      font-family: "Saira", sans-serif;
+}
+    
+h2 {
+  font-weight: 300;
+  line-height: 1.8em;
+  max-height: calc(1.5em * 8); /* Limit to 8 lines */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 8;
+  -webkit-box-orient: vertical;
+
+  font-size: calc(16px + 0.5vw); /* Responsive font size */
+  margin: 5vw;
+  margin-top: -2vw;
+}
+
+/* 📱 Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  h2 {
+    font-size: 14px;
+    margin: 4vw;
+    margin-top: -3vw;
+  }
+}
+
+/* 📱 Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+  h2 {
+    font-size: 16px;
+    margin: 5vw;
+    margin-top: -2vw;
+  }
+}
+
+/* 💻 Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  h2 {
+    font-size: 18px;
+    margin: 6vw;
+    margin-top: -1vw;
+  }
+}
+
+/* 🖥️ Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  h2 {
+    font-size: 20px;
+    margin: 7vw;
+    margin-top: 0;
+  }
+}
+.full h1 {
+  font-family: "Saira", sans-serif;
+  font-weight: 400; /* or 300, 500 depending on your style */
+}
