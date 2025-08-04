@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
-/* 🌟 Main Heading */
+
 h1 {
    font-family: "Outfit", sans-serif;
   text-align: center;
@@ -9,9 +9,8 @@ h1 {
   font-weight: 400;
 }
 
-/* 🖼️ Background Container */
 .bg {
-  background: #F0EBE3;
+   background-image: url('/bg2.jpg');
   background-size: cover;
   background-position: center;
   min-height: 100vh;
@@ -22,7 +21,6 @@ h1 {
   cursor: pointer;
 }
 
-/* 👋 Greeting Section */
 .greet {
   text-align: center;
   padding: 2rem;
@@ -37,12 +35,12 @@ h1 {
   background: transparent;
 }
 
-/* 🧑‍💻 Profile Image */
+
 .profile-img {
   mix-blend-mode: multiply;
   width: 350px;
   height: auto;
   transition: transform 0.3s ease;
   border-radius: 50%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
 }

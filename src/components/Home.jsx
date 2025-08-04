@@ -1,5 +1,5 @@
 import './Home.css';
-import myImg from '../assets/myimg.png'; // ✅ Correct path
+import myImg from '../assets/bg.png'; // ✅ Correct path
 
 const Home = () => {
   return (
@@ -7,9 +7,14 @@ const Home = () => {
       <div className="greet">
         <img src={myImg} alt="myimg" className="profile-img" />
         <h1>
-          Hi, I’m Anudev <br />
-          a Fullstack Developer crafting seamless web experiences with MERN & Python.
-        </h1>
+           I’m </h1>
+           <h2>Anudev.vp</h2>
+           <h3>Full StackDeveloper</h3>
+
+
+        <button>Hire Me</button>
+        <button>Contact Me</button>
+          
         
       </div>
     </div>
