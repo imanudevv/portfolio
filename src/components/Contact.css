@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&display=swap');
+
+.container h1 {
+  font-family: "DM Serif Display", serif;
+  font-size: 48px;
+  line-height: 1.2;
+  margin: 0;
+  padding: 40px 0;
+  text-align: center;
+  color: #333;
+  font-weight: 400;
+}

@@ -34,10 +34,10 @@ h1 {
 
 .greet h1 {
      font-family: "Outfit", sans-serif;
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: black;
   margin: 0;
-  font-weight: 500;
+  font-weight: 400;
   margin-top: -50px;
   margin-right: 160px;
 }
@@ -64,11 +64,11 @@ h1 {
 
 .greet h3 {
   font-family: "Outfit", sans-serif;
-  font-size: 1.5rem;
-  color: #666;
+  font-size: 2rem;
+  color: #776969;
   margin: 0;
-  font-weight: 400;
-  margin-right: 30px;
+  font-weight: 500;
+  margin-right: -40px;
 }
 
 .greet button {
