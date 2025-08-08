@@ -1,7 +1,9 @@
 import './Home.css';
 import myImg from '../assets/bg.png'; // ✅ Correct path
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
+  const navigate = useNavigate();
   return (
     <div className='bg'>
       <div className="greet">
@@ -13,7 +15,7 @@ const Home = () => {
 
         <div className="button-container">
           <button>Hire Me</button>
-          <button className='b2'>Contact Me</button>
+           <button onClick={()=>navigate("contact")}>Contact</button>
         </div>
         
       </div>
