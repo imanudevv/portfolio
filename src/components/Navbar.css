@@ -1,31 +1,38 @@
 .navbar {
   width: 100%;
-  background-color: #F0EBE3;
   display: flex;
   justify-content: center;
   padding: 10px 0;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
 }
 
 nav {
+  
   position: relative;
   width: 390px;
   height: 50px;
   border-radius: 10px;
   display: flex;
   align-items: center;
-  background: #8b7272;
+  margin-left:-1100px;
   padding: 0 10px;
+  font-size: 18px;
+ 
 }
 
 nav a {
   position: relative;
   display: inline-block;
   font-size: 1em;
-  color: white;
+  color: black;
   text-decoration: none;
   padding: 0 23px;
   z-index: 1;
   font-weight: 500;
+   font-family: "Libertinus Sans", sans-serif;
+   
 }
 
 nav span {
@@ -34,9 +41,7 @@ nav span {
   left: 0;
   height: 100%;
   width: 125px;
-  background: linear-gradient(45deg, #194b4f, #33fffc);
-  border-radius: 10px;
-  transition: left 0.3s ease;
+ 
 }
 
 /* Responsive tweak */

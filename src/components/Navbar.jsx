@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 
-
 const Navbar = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -10,7 +9,7 @@ const Navbar = () => {
     setActiveIndex(index);
   };
 
-  const highlightWidth = 95;
+  const highlightWidth = 100;
   const highlightLeft = activeIndex * highlightWidth;
 
   return (

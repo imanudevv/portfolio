@@ -7,3 +7,20 @@
   color: #333;
   margin-bottom: 20px;
 } 
+.skills .logos{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.skills .logos img{
+  width: 130px;
+  height: 120px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  object-fit: cover;
+}
+.skills .logos img:hover{
+  transform: scale(1.1);
+}
