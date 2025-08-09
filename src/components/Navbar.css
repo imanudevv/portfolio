@@ -1,3 +1,4 @@
+/* Base layout: keep structure from original JSX, no backgrounds */
 .navbar {
   width: 100%;
   display: flex;
@@ -9,17 +10,13 @@
 }
 
 nav {
-  
   position: relative;
-  width: 390px;
-  height: 50px;
-  border-radius: 10px;
   display: flex;
   align-items: center;
-  margin-left:-1100px;
+  gap: 20px;
+  height: 50px;
   padding: 0 10px;
   font-size: 18px;
- 
 }
 
 nav a {
@@ -28,34 +25,38 @@ nav a {
   font-size: 1em;
   color: black;
   text-decoration: none;
-  padding: 0 23px;
+  padding: 0 16px;
   z-index: 1;
   font-weight: 500;
-   font-family: "Libertinus Sans", sans-serif;
-   
+  font-family: "Libertinus Sans", sans-serif;
+  white-space: nowrap;
 }
 
+/* Hover highlight span (moved by inline style from JSX) */
 nav span {
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
-  width: 125px;
- 
+  width: 100px; /* match highlightWidth in JSX */
 }
 
-/* Responsive tweak */
+/* Responsiveness */
+@media (max-width: 900px) {
+  nav { gap: 12px; }
+  nav a { padding: 0 12px; }
+}
+
 @media (max-width: 600px) {
   nav {
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
     height: auto;
   }
-
   nav a {
-    padding: 10px;
+    padding: 8px 10px;
+    font-size: 0.95em;
   }
-
-  nav span {
-    display: none; /* Optional: hide highlight on mobile */
-  }
+  /* Optional: hide highlight on small screens to avoid misalignment */
+  nav span { display: none; }
 }

@@ -1,31 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Libertinus+Sans:ital,wght@0,400;0,700;1,400&display=swap');
 .about {
   padding: 2rem;
   text-align: center;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start; 
   margin-top: -70px;
+  padding-top: 120px; 
 }
 
 .about h1 {
-   font-family: "Libertinus Sans", sans-serif;
-
+  font-family: "Libertinus Sans", sans-serif;
   font-size: 3rem;
   color: black;
-  
+  margin-bottom: 1rem;
 }
 
 .about p {
-  font-family: "Outfit", sans-serif;
+  font-family: "Libertinus Sans", sans-serif;
   font-size: 1.3rem;
   color: #666;
   max-width: 900px;
-  line-height: 29px;
+  line-height: 1.8;
   letter-spacing: 1px;
-    font-family: "Libertinus Sans", sans-serif;
-    margin-top: -10px;
-
+  margin-top: 0.5rem; 
+  padding: 0 1rem;
 }

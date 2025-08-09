@@ -1,5 +1,6 @@
 .skills {
   padding: 20px;
+  padding-top: 100px; /* move section down from fixed navbar */
   text-align: center;
   transition: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
@@ -7,16 +8,18 @@
 .skills h1 {
   color: #333;
   margin-bottom: 20px;
+  font-size: clamp(1.5rem, 5vw, 2.25rem);
 } 
 .skills .logos{
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
+  flex-wrap: wrap;
 }
 .skills .logos img{
-  width: 130px;
-  height: 120px;
+  width: clamp(72px, 18vw, 120px);
+  height: clamp(72px, 18vw, 120px);
   border-radius: 50%;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
@@ -24,4 +27,23 @@
 }
 .skills .logos img:hover{
   transform: scale(1.1);
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .skills {
+    padding: 16px;
+    padding-top: 80px;
+  }
+  .skills .logos {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills { padding-top: 64px; }
+  .skills .logos img {
+    width: clamp(60px, 26vw, 96px);
+    height: clamp(60px, 26vw, 96px);
+  }
 }
