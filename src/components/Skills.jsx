@@ -2,7 +2,7 @@ import React from 'react';
 import './Skills.css';
 import logos from '../assets/js.png';
 import logo1 from '../assets/html.png'
-import logo2 from '../assets/Python.png'
+import logo2 from '../assets/python.png'
 import logo3 from '../assets/css.png'
 import logo4 from '../assets/react-Logo.png'
 import logo5 from '../assets/nodejs.png'
