@@ -1,4 +1,4 @@
-/* Base layout: keep structure from original JSX, no backgrounds */
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&family=Outfit:wght@100..900&display=swap');
 .navbar {
   width: 100%;
   display: flex;
@@ -17,6 +17,8 @@ nav {
   height: 50px;
   padding: 0 10px;
   font-size: 18px;
+  
+
 }
 
 nav a {
@@ -27,9 +29,10 @@ nav a {
   text-decoration: none;
   padding: 0 16px;
   z-index: 1;
-  font-weight: 500;
-  font-family: "Libertinus Sans", sans-serif;
+  font-weight: 400;
+
   white-space: nowrap;
+    font-family: "Outfit", sans-serif;
 }
 
 /* Hover highlight span (moved by inline style from JSX) */

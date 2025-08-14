@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&family=Outfit:wght@100..900&display=swap');
 .about {
   padding: 2rem;
   text-align: center;
@@ -11,7 +12,8 @@
 }
 
 .about h1 {
-  font-family: "Libertinus Sans", sans-serif;
+  font-family: "Outfit", sans-serif;
+
   font-size: 3rem;
   color: black;
   margin-bottom: 1rem;
@@ -19,7 +21,8 @@
 }
 
 .about p {
-  font-family: "Libertinus Sans", sans-serif;
+     font-family: "Outfit", sans-serif;
+
   font-size: 1.3rem;
   color: #666;
   max-width: 900px;

@@ -24,6 +24,7 @@
 
 .greet h1 {
   font-family: "Outfit", sans-serif;
+
   font-size: clamp(1.5rem, 4vw, 2.5rem);
   color: black;
   margin: 0;
