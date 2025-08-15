@@ -1,10 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Contact.css';
 
 const Contact = () => {
+  const [status, setStatus] = useState("");
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form data here
+
+    // Simulate success or error
+    const isSuccessful = Math.random() > 0.5;
+
+    if (isSuccessful) {
+      setStatus("success");
+    } else {
+      setStatus("error");
+    }
+
     console.log("Form submitted");
   };
 
@@ -46,19 +57,18 @@ const Contact = () => {
           <button type="submit" className="submit-btn">Submit</button>
         </form>
 
-       <div>
-  <a
-    href="https://www.instagram.com/_anudevv/"
-    target="_blank"
-    rel="noopener noreferrer"
-    style={{ color: "#e1306c", fontSize: "2rem" }}
-  >
-    
-  </a>
-</div>
-
+        {status === "success" ? (
+          <div style={{ color: "green", marginTop: "10px" }}>
+            ✅ Thank you! Submission successful.
+          </div>
+        ) : status === "error" ? (
+          <div style={{ color: "red", marginTop: "10px" }}>
+            ❌ Error! Something went wrong.
+          </div>
+        ) : null}
       </div>
     </>
   );
 };
+
 export default Contact;
