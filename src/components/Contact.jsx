@@ -56,16 +56,21 @@ const Contact = () => {
 
           <button type="submit" className="submit-btn">Submit</button>
         </form>
+        <a
+          href="https://www.instagram.com/yourusername"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="insta-button"
+        >
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"
+            alt="Instagram"
+            className="insta-icon"
+          />
+          Visit My Instagram
+        </a>
 
-        {status === "success" ? (
-          <div style={{ color: "green", marginTop: "10px" }}>
-            ✅ Thank you! Submission successful.
-          </div>
-        ) : status === "error" ? (
-          <div style={{ color: "red", marginTop: "10px" }}>
-            ❌ Error! Something went wrong.
-          </div>
-        ) : null}
+
       </div>
     </>
   );

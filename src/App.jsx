@@ -1,25 +1,31 @@
 
 import './App.css'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import About from './components/About'
-import Contact from './components/Contact'
-import Home from './components/Home'
+import { Suspense, lazy } from 'react'
 import Navbar from './components/Navbar'
-import Skills from './components/Skills'
+
+
+const About = lazy(() => import('./components/About'))
+const Contact = lazy(() => import('./components/Contact'))
+const Home = lazy(() => import('./components/Home'))
+const Skills = lazy(() => import('./components/Skills'))
+
 
 function App() {
   return (
-    <>
-      <Router>
-        <Navbar/>
+
+    <Router>
+      <Navbar />
+      <Suspense fallback={<div>Loading...</div>}>
         <Routes>
-          <Route path='/' element={<Home/>}/>
-          <Route path='/about' element={<About/>}/>
-          <Route path='/skills' element={<Skills/>}/>
-          <Route path='/contact' element={<Contact/>}/>
+          <Route path='/' element={<Home />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/skills' element={<Skills />} />
+          <Route path='/contact' element={<Contact />} />
         </Routes>
-      </Router>
-    </>
+      </Suspense>
+    </Router>
+
   )
 }
 
