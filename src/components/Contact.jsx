@@ -23,7 +23,7 @@ const Contact = () => {
     <>
       <div className="container">
         <h1>Let's Create <br /> Something That Leaves a Mark</h1>
-      </div>
+     
 
       <div className="form-container">
         <form onSubmit={handleSubmit} className="form">
@@ -56,8 +56,13 @@ const Contact = () => {
 
           <button type="submit" className="submit-btn">Submit</button>
         </form>
-        <a
-          href="https://www.instagram.com/yourusername"
+  
+
+
+      </div>
+      <div className='ac'>
+            <a
+          href="https://www.instagram.com/"
           target="_blank"
           rel="noopener noreferrer"
           className="insta-button"
@@ -69,9 +74,35 @@ const Contact = () => {
           />
           Visit My Instagram
         </a>
+       <a
+  href="https://github.com/imanudevv"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="insta-button"
+>
+  <img
+    src="https://cdn-icons-png.flaticon.com/512/733/733553.png"
+    alt="GitHub"
+    class="insta-icon"
+  />
+  Visit My Github
+</a>
+<a
+  href="https://www.linkedin.com/in/anudev-vp-750a03358/"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="insta-button"
+>
+  <img
+    src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
+    alt="LinkedIn"
+    class="insta-icon"
+  />
+  Visit My LinkedIn
+</a>
 
-
-      </div>
+</div>
+       </div>
     </>
   );
 };
