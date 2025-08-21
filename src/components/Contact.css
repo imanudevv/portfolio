@@ -151,4 +151,5 @@ input[type="text"]:focus{
 }
 .ac{
   display: flex;
+  justify-content: center;
 }

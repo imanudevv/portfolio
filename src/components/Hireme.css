@@ -1,0 +1,26 @@
+button{
+    justify-content: center;
+    border-radius: 10px;
+      font-family: "Outfit", sans-serif;
+      padding: 12px 24px;
+      font-size: 1rem;
+      font-weight: 500;
+      cursor: pointer;
+      margin: 8px;
+      margin-top: 150px;
+      transition: all 0.3s ease;
+      border: none;
+      
+}
+ button:first-of-type {
+  background-color: #007bff;
+  color: white;
+
+
+}
+button:last-of-type {
+  background-color: transparent;
+  color: #007bff;
+  border: 2px solid #007bff;
+}
+

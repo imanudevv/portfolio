@@ -14,7 +14,7 @@ const Home = () => {
            <h3>Full StackDeveloper</h3>
 
         <div className="button-container">
-          <button>Hire Me</button>
+          <button onClick={()=>navigate("Hireme")}>Hire Me</button>
            <button onClick={()=>navigate("contact")}>Contact</button>
         </div>
         
