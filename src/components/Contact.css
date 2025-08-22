@@ -1,15 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&display=swap');
 
-.container {
-  padding-top: 100px; /* move heading down from fixed navbar */
-}
+
 
 .container h1 {
   font-family: "DM Serif Display", serif;
   font-size: clamp(1.75rem, 5vw, 3rem);
   line-height: 1.2;
   margin: 0;
-  padding: 40px 0;
+  padding: 20px 0 40px 0;
   text-align: center;
   color: #333;
   font-weight: 400;
@@ -148,8 +146,4 @@ input[type="text"]:focus{
 .insta-icon {
   width: 20px;
   height: 20px;
-}
-.ac{
-  display: flex;
-  justify-content: center;
 }
