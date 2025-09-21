@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -9,16 +8,23 @@ const Navbar = () => {
     setActiveIndex(index);
   };
 
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   const highlightWidth = 100;
   const highlightLeft = activeIndex * highlightWidth;
 
   return (
     <div className="navbar">
       <nav>
-        <Link to="/" onMouseEnter={() => handleHover(0)}>HOME</Link>
-        <Link to="/about" onMouseEnter={() => handleHover(1)}>ABOUT</Link>
-        <Link to="/skills" onMouseEnter={() => handleHover(2)}>SKILLS</Link>
-        <Link to="/contact" onMouseEnter={() => handleHover(3)}>CONTACT</Link>
+        <a href="#home" onClick={() => scrollToSection('home')} onMouseEnter={() => handleHover(0)}>HOME</a>
+        <a href="#about" onClick={() => scrollToSection('about')} onMouseEnter={() => handleHover(1)}>ABOUT</a>
+        <a href="#skills" onClick={() => scrollToSection('skills')} onMouseEnter={() => handleHover(2)}>SKILLS</a>
+        <a href="#contact" onClick={() => scrollToSection('contact')} onMouseEnter={() => handleHover(3)}>CONTACT</a>
         <span style={{ left: `${highlightLeft}px` }}></span>
       </nav>
     </div>

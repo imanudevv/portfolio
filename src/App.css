@@ -1,0 +1,40 @@
+/* Smooth scrolling for the entire page */
+html {
+  scroll-behavior: smooth;
+}
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.main-content {
+  width: 100%;
+}
+
+.section {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+/* Ensure each section takes full viewport height */
+#home {
+  min-height: 100vh;
+}
+
+#about {
+  min-height: 100vh;
+}
+
+#skills {
+  min-height: 100vh;
+}
+
+
+#contact {
+  min-height: 100vh;
+}

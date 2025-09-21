@@ -1,19 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&family=Outfit:wght@100..900&display=swap');
 .about {
-  padding: 2rem;
+  padding: 1rem;
   text-align: center;
-  min-height: 100vh;
+  min-height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center; 
   align-items: center;
-  margin-top: -70px;
-  padding-top: 120px; 
+  margin-top: -50px;
+  padding-top: 80px; 
+  padding-bottom: 20px;
 }
 
 .about h1 {
   font-family: "Outfit", sans-serif;
-
   font-size: 3rem;
   color: black;
   margin-bottom: 1rem;
@@ -21,8 +21,7 @@
 }
 
 .about p {
-     font-family: "Outfit", sans-serif;
-
+  font-family: "Outfit", sans-serif;
   font-size: 1.3rem;
   color: #666;
   max-width: 900px;

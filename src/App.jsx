@@ -1,33 +1,30 @@
 
 import './App.css'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import { Suspense, lazy } from 'react'
 import Navbar from './components/Navbar'
-import Hireme from './components/Hireme'
-
-
-const About = lazy(() => import('./components/About'))
-const Contact = lazy(() => import('./components/Contact'))
-const Home = lazy(() => import('./components/Home'))
-const Skills = lazy(() => import('./components/Skills'))
-
+import Home from './components/Home'
+import About from './components/About'
+import Skills from './components/Skills'
+import Contact from './components/Contact'
 
 function App() {
   return (
-  
-    <Router>
+    <div className="app">
       <Navbar />
-      <Suspense fallback={<div>Loading...</div>}>
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/about' element={<About />} />
-          <Route path='/skills' element={<Skills />} />
-          <Route path='/contact' element={<Contact />} />
-          <Route path='/Hireme' element={<Hireme/>} />
-        </Routes>
-      </Suspense>
-    </Router>
-
+      <main className="main-content">
+        <section id="home" className="section">
+          <Home />
+        </section>
+        <section id="about" className="section">
+          <About />
+        </section>
+        <section id="skills" className="section">
+          <Skills />
+        </section>
+        <section id="contact" className="section">
+          <Contact />
+        </section>
+      </main>
+    </div>
   )
 }
 

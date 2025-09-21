@@ -1,9 +1,14 @@
 import './Home.css';
 import myImg from '../assets/bg.png'; // ✅ Correct path
-import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
-  const navigate = useNavigate();
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className='bg'>
       <div className="greet">
@@ -14,8 +19,7 @@ const Home = () => {
            <h3>Full StackDeveloper</h3>
 
         <div className="button-container">
-          <button onClick={()=>navigate("Hireme")}>Hire Me</button>
-           <button onClick={()=>navigate("contact")}>Contact</button>
+           <button onClick={() => scrollToSection('contact')}>Contact</button>
         </div>
         
       </div>

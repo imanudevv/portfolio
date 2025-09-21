@@ -1,14 +1,30 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import './Contact.css';
 
 const Contact = () => {
   const [status, setStatus] = useState("");
+  const form = useRef();
 
-  const handleSubmit = (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
-    const isSuccessful = Math.random() > 0.5;
-    setStatus(isSuccessful ? "success" : "error");
-    console.log("Form submitted");
+    setStatus("sending");
+
+    emailjs
+      .sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, {
+        publicKey: 'YOUR_PUBLIC_KEY',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+          setStatus("success");
+          form.current.reset();
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+          setStatus("error");
+        },
+      );
   };
 
   return (
@@ -16,21 +32,21 @@ const Contact = () => {
       <h1>Let's Create <br /> Something That Leaves a Mark</h1>
 
       <div className="form-container">
-        <form onSubmit={handleSubmit} className="form">
-          <label htmlFor="name">Your Name</label>
+        <form ref={form} onSubmit={sendEmail} className="form">
+          <label htmlFor="user_name">Your Name</label>
           <input
             type="text"
-            id="name"
-            name="name"
+            id="user_name"
+            name="user_name"
             placeholder="Enter Your Name"
             required
           />
 
-          <label htmlFor="email">Your Email</label>
+          <label htmlFor="user_email">Your Email</label>
           <input
             type="email"
-            id="email"
-            name="email"
+            id="user_email"
+            name="user_email"
             placeholder="Enter Your Email"
             required
           />
@@ -44,7 +60,21 @@ const Contact = () => {
             required
           ></textarea>
 
-          <button type="submit" className="submit-btn">Submit</button>
+          <button type="submit" className="submit-btn" disabled={status === "sending"}>
+            {status === "sending" ? "Sending..." : "Submit"}
+          </button>
+          
+          {status === "success" && (
+            <div className="status-message success">
+              Message sent successfully! I'll get back to you soon.
+            </div>
+          )}
+          
+          {status === "error" && (
+            <div className="status-message error">
+              Failed to send message. Please try again.
+            </div>
+          )}
         </form>
       </div>
 
