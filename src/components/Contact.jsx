@@ -1,30 +1,15 @@
-import React, { useState, useRef } from 'react';
-import emailjs from '@emailjs/browser';
+import React, { useState } from 'react';
 import './Contact.css';
 
 const Contact = () => {
   const [status, setStatus] = useState("");
-  const form = useRef();
 
-  const sendEmail = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    setStatus("sending");
+    setStatus("success");
 
-    emailjs
-      .sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, {
-        publicKey: 'YOUR_PUBLIC_KEY',
-      })
-      .then(
-        () => {
-          console.log('SUCCESS!');
-          setStatus("success");
-          form.current.reset();
-        },
-        (error) => {
-          console.log('FAILED...', error.text);
-          setStatus("error");
-        },
-      );
+    // Reset form after submission
+    e.target.reset();
   };
 
   return (
@@ -32,7 +17,7 @@ const Contact = () => {
       <h1>Let's Create <br /> Something That Leaves a Mark</h1>
 
       <div className="form-container">
-        <form ref={form} onSubmit={sendEmail} className="form">
+        <form onSubmit={handleSubmit} className="form">
           <label htmlFor="user_name">Your Name</label>
           <input
             type="text"
@@ -60,19 +45,13 @@ const Contact = () => {
             required
           ></textarea>
 
-          <button type="submit" className="submit-btn" disabled={status === "sending"}>
-            {status === "sending" ? "Sending..." : "Submit"}
+          <button type="submit" className="submit-btn">
+            Submit
           </button>
           
           {status === "success" && (
             <div className="status-message success">
-              Message sent successfully! I'll get back to you soon.
-            </div>
-          )}
-          
-          {status === "error" && (
-            <div className="status-message error">
-              Failed to send message. Please try again.
+              Message submitted (demo only). No email sent.
             </div>
           )}
         </form>
